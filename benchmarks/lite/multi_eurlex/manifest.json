@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "external": {
+    "source": "mteb/eurlex-multilingual (MultiEURLEX level 1)",
+    "rights": "cc-by-sa-4.0",
+    "sample": {
+      "n_per_part": 500,
+      "seed": 0
+    }
+  },
+  "base_revisions": {},
+  "dataset_revisions": {},
+  "holdout_sources": [],
+  "trainable_sources": [],
+  "eval_only_sources": [
+    "multi_eurlex"
+  ],
+  "context": {
+    "max_state": 8192,
+    "max_branch": 8192,
+    "max_packed": 16384,
+    "truncate": false
+  },
+  "eval_only": true,
+  "tasks": [
+    "multi_eurlex_de",
+    "multi_eurlex_en",
+    "multi_eurlex_es",
+    "multi_eurlex_fr"
+  ],
+  "parts": {
+    "en": 5,
+    "de": 5,
+    "fr": 5,
+    "es": 5
+  },
+  "files": {
+    "development.jsonl": {
+      "sha256": "d866952415ec9cd76e2caf047be5540bdb997774e3ba4690bebe7161e99cf422",
+      "records": 20
+    },
+    "train.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    },
+    "calibration.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    },
+    "test.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    }
+  },
+  "lite": {
+    "from": "benchmarks/multi_eurlex",
+    "n_per_part": 5,
+    "seed": 0
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "external": {
+    "source": "google/civil_comments:validation",
+    "rights": "cc0-1.0",
+    "sample": {
+      "n_per_part": null,
+      "seed": 0
+    }
+  },
+  "base_revisions": {},
+  "dataset_revisions": {},
+  "holdout_sources": [],
+  "trainable_sources": [],
+  "eval_only_sources": [
+    "val_civil_toxicity"
+  ],
+  "context": {
+    "max_state": 8192,
+    "max_branch": 8192,
+    "max_packed": 16384,
+    "truncate": false
+  },
+  "eval_only": true,
+  "tasks": [
+    "val_civil"
+  ],
+  "parts": {
+    "None": 300
+  },
+  "files": {
+    "development.jsonl": {
+      "sha256": "4f87ec8b6281b1383387296a196e69dc51894e616b7e0e42730698b4c2306f23",
+      "records": 300
+    },
+    "train.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    },
+    "calibration.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    },
+    "test.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    }
+  }
+}

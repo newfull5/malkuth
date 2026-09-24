@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "external": {
+    "source": "google-research-datasets/paws-x",
+    "rights": "other (PAWS-X: may be freely used)",
+    "sample": {
+      "n_per_part": 500,
+      "seed": 0
+    }
+  },
+  "base_revisions": {},
+  "dataset_revisions": {},
+  "holdout_sources": [],
+  "trainable_sources": [],
+  "eval_only_sources": [
+    "paws_x"
+  ],
+  "context": {
+    "max_state": 8192,
+    "max_branch": 8192,
+    "max_packed": 16384,
+    "truncate": false
+  },
+  "eval_only": true,
+  "tasks": [
+    "paws_x_de",
+    "paws_x_en",
+    "paws_x_es",
+    "paws_x_fr",
+    "paws_x_ja",
+    "paws_x_ko",
+    "paws_x_zh"
+  ],
+  "parts": {
+    "en": 100,
+    "ko": 100,
+    "ja": 100,
+    "zh": 100,
+    "de": 100,
+    "fr": 100,
+    "es": 100
+  },
+  "files": {
+    "development.jsonl": {
+      "sha256": "ce957414dfcdf27b8c5636022e52235cb8667109f58d8e8594f3c7e1c8e66d0c",
+      "records": 700
+    },
+    "train.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    },
+    "calibration.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    },
+    "test.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    }
+  },
+  "lite": {
+    "from": "benchmarks/paws_x",
+    "n_per_part": 100,
+    "seed": 0
+  }
+}

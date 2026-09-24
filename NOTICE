@@ -1,0 +1,32 @@
+Malkuth
+Copyright 2026 Saechan Oh
+
+This product includes software and model weights derived from:
+
+  Kev (https://github.com/jaredpalmer/kev)
+  Copyright Jared Palmer, licensed under the Apache License, Version 2.0.
+  The Malkuth checkpoints are LoRA adapters and pointer heads warm-started from
+  Kev's released checkpoints (--init_from jaredpalmer/kev-4b).
+
+  Qwen3.5-4B-Base (https://huggingface.co/Qwen/Qwen3.5-4B-Base)
+  Qwen3.8-2B-Distill (https://huggingface.co/empero-ai/Qwen3.8-2B-Distill)
+  Base models, licensed under the Apache License, Version 2.0.
+
+The Apache-2.0 licence in LICENSE covers this repository's code. It does not
+cover the evaluation data under benchmarks/, which keeps the licence of each
+source dataset, nor the model weights.
+
+Model weights are research use only. Two of the twenty sources in the training
+mix carry non-commercial terms: XNLI (CC-BY-NC-4.0, facebookresearch/XNLI) and
+RACE ("available for non-commercial research purpose only"). Two more state no
+licence at all: ucirvine/sms_spam and cardiffnlp/tweet_sentiment_multilingual.
+
+Evaluation suites built from non-commercial sources are not distributed here:
+XNLI, FinancialPhraseBank (CC-BY-NC-SA-3.0) and RACE, whose terms forbid
+redistributing derived data. benchmarks/README.md rebuilds them from source.
+Per-source licences for both the training mix and the benchmarks are in
+docs/benchmarks.md.
+
+Malkuth is not affiliated with TypeSafe AI. "Jev" and "System One" identify the
+API contract this project is compatible with and the baseline it is measured
+against.

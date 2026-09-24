@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "external": {
+    "source": "facebook/belebele",
+    "rights": "cc-by-sa-4.0",
+    "sample": {
+      "n_per_part": 500,
+      "seed": 0
+    }
+  },
+  "base_revisions": {},
+  "dataset_revisions": {},
+  "holdout_sources": [],
+  "trainable_sources": [],
+  "eval_only_sources": [
+    "belebele"
+  ],
+  "context": {
+    "max_state": 8192,
+    "max_branch": 8192,
+    "max_packed": 16384,
+    "truncate": false
+  },
+  "eval_only": true,
+  "tasks": [
+    "belebele_ar",
+    "belebele_de",
+    "belebele_en",
+    "belebele_es",
+    "belebele_fr",
+    "belebele_hi",
+    "belebele_ja",
+    "belebele_ko",
+    "belebele_th",
+    "belebele_zh"
+  ],
+  "parts": {
+    "en": 100,
+    "ko": 100,
+    "ja": 100,
+    "zh": 100,
+    "de": 100,
+    "fr": 100,
+    "es": 100,
+    "hi": 100,
+    "ar": 100,
+    "th": 100
+  },
+  "files": {
+    "development.jsonl": {
+      "sha256": "11cd7abddd917f7b7bb40a606402c111d7a8afd0032ff399039e5e9f85aa76be",
+      "records": 1000
+    },
+    "train.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    },
+    "calibration.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    },
+    "test.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    }
+  },
+  "lite": {
+    "from": "benchmarks/belebele",
+    "n_per_part": 100,
+    "seed": 0
+  }
+}

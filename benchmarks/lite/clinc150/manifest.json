@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "external": {
+    "source": "clinc/clinc_oos:plus",
+    "rights": "cc-by-3.0",
+    "sample": {
+      "n_per_part": 500,
+      "seed": 0
+    }
+  },
+  "base_revisions": {},
+  "dataset_revisions": {},
+  "holdout_sources": [],
+  "trainable_sources": [],
+  "eval_only_sources": [
+    "clinc150"
+  ],
+  "context": {
+    "max_state": 8192,
+    "max_branch": 8192,
+    "max_packed": 16384,
+    "truncate": false
+  },
+  "eval_only": true,
+  "tasks": [
+    "clinc150"
+  ],
+  "parts": {
+    "None": 20
+  },
+  "files": {
+    "development.jsonl": {
+      "sha256": "e7ea581c23da2fcf7000e0742455aee19c1c7331e0ac1c3602fe0b023294cc31",
+      "records": 20
+    },
+    "train.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    },
+    "calibration.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    },
+    "test.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    }
+  },
+  "lite": {
+    "from": "benchmarks/clinc150",
+    "n_per_part": 20,
+    "seed": 0
+  }
+}

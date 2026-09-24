@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "external": {
+    "source": "laya repo (NandhaKishorM/laya), seed 13, laya_benchmark_colab.ipynb",
+    "rights": "per upstream dataset; see docs/benchmarks.md",
+    "sample": {
+      "n_per_part": null,
+      "seed": 13
+    }
+  },
+  "base_revisions": {},
+  "dataset_revisions": {},
+  "holdout_sources": [],
+  "trainable_sources": [],
+  "eval_only_sources": [
+    "laya_typed_decisions"
+  ],
+  "context": {
+    "max_state": 8192,
+    "max_branch": 8192,
+    "max_packed": 16384,
+    "truncate": false
+  },
+  "eval_only": true,
+  "tasks": [
+    "td_agent_trace_observability",
+    "td_customer_service",
+    "td_invoice_processing",
+    "td_security_incidents"
+  ],
+  "parts": {
+    "agent_trace_observability": 20,
+    "customer_service": 20,
+    "invoice_processing": 20,
+    "security_incidents": 20
+  },
+  "files": {
+    "development.jsonl": {
+      "sha256": "bbd2f19d387d19c4f53b8d70fc3b8c26d0b8a19b13955bae4f2fb4fd7c60ae24",
+      "records": 80
+    },
+    "train.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    },
+    "calibration.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    },
+    "test.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    }
+  },
+  "lite": {
+    "from": "benchmarks/laya_typed_decisions",
+    "n_per_part": 20,
+    "seed": 0
+  }
+}

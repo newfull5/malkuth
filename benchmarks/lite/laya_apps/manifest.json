@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "external": {
+    "source": "laya repo (NandhaKishorM/laya), seed 13, bench_apps.py",
+    "rights": "per upstream dataset; see docs/benchmarks.md",
+    "sample": {
+      "n_per_part": null,
+      "seed": 13
+    }
+  },
+  "base_revisions": {},
+  "dataset_revisions": {},
+  "holdout_sources": [],
+  "trainable_sources": [],
+  "eval_only_sources": [
+    "laya_apps"
+  ],
+  "context": {
+    "max_state": 8192,
+    "max_branch": 8192,
+    "max_packed": 16384,
+    "truncate": false
+  },
+  "eval_only": true,
+  "tasks": [
+    "app_email_spam",
+    "app_guardrails_jailbreak",
+    "app_model_routing_domain",
+    "app_moderation_toxicity",
+    "app_phishing",
+    "app_rag_relevance",
+    "app_support_triage",
+    "jev_ag_news",
+    "jev_banking77_full",
+    "jev_emotion"
+  ],
+  "parts": {
+    "jev.ag_news": 20,
+    "jev.emotion": 20,
+    "jev.banking77_full": 20,
+    "app.support_triage": 20,
+    "app.email_spam": 20,
+    "app.phishing": 20,
+    "app.guardrails_jailbreak": 20,
+    "app.moderation_toxicity": 20,
+    "app.rag_relevance": 20,
+    "app.model_routing_domain": 20
+  },
+  "files": {
+    "development.jsonl": {
+      "sha256": "30651278181d3d9f40c30d7f9a73202c2f3fe427f2d45d33b2cb29212854f51e",
+      "records": 200
+    },
+    "train.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    },
+    "calibration.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    },
+    "test.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    }
+  },
+  "lite": {
+    "from": "benchmarks/laya_apps",
+    "n_per_part": 20,
+    "seed": 0
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "external": {
+    "source": "skt/kobest_v1",
+    "rights": "cc-by-sa-4.0",
+    "sample": {
+      "n_per_part": 500,
+      "seed": 0
+    }
+  },
+  "base_revisions": {},
+  "dataset_revisions": {},
+  "holdout_sources": [],
+  "trainable_sources": [],
+  "eval_only_sources": [
+    "kobest"
+  ],
+  "context": {
+    "max_state": 8192,
+    "max_branch": 8192,
+    "max_packed": 16384,
+    "truncate": false
+  },
+  "eval_only": true,
+  "tasks": [
+    "kobest_boolq",
+    "kobest_copa",
+    "kobest_hellaswag",
+    "kobest_sentineg",
+    "kobest_wic"
+  ],
+  "parts": {
+    "boolq": 100,
+    "copa": 100,
+    "wic": 100,
+    "hellaswag": 100,
+    "sentineg": 100
+  },
+  "files": {
+    "development.jsonl": {
+      "sha256": "6a83eac113475ceb6e4e7f772e0c342e1b505d8153bfa84305c23eb51766ce66",
+      "records": 500
+    },
+    "train.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    },
+    "calibration.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    },
+    "test.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    }
+  },
+  "lite": {
+    "from": "benchmarks/kobest",
+    "n_per_part": 100,
+    "seed": 0
+  }
+}

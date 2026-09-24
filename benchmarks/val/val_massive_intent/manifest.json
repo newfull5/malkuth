@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "external": {
+    "source": "mteb/amazon_massive_intent:validation",
+    "rights": "cc-by-4.0",
+    "sample": {
+      "n_per_part": 50,
+      "seed": 0
+    }
+  },
+  "base_revisions": {},
+  "dataset_revisions": {},
+  "holdout_sources": [],
+  "trainable_sources": [],
+  "eval_only_sources": [
+    "val_massive_intent"
+  ],
+  "context": {
+    "max_state": 8192,
+    "max_branch": 8192,
+    "max_packed": 16384,
+    "truncate": false
+  },
+  "eval_only": true,
+  "tasks": [
+    "val_massive_ar",
+    "val_massive_de",
+    "val_massive_en",
+    "val_massive_es",
+    "val_massive_fr",
+    "val_massive_hi",
+    "val_massive_ja",
+    "val_massive_ko",
+    "val_massive_th",
+    "val_massive_zh"
+  ],
+  "parts": {
+    "en": 50,
+    "ko": 50,
+    "ja": 50,
+    "zh": 50,
+    "de": 50,
+    "fr": 50,
+    "es": 50,
+    "hi": 50,
+    "ar": 50,
+    "th": 50
+  },
+  "files": {
+    "development.jsonl": {
+      "sha256": "727bc37c0326471de3b864c86a969d6bb5a8a3cee235bb69fb1c203fa45c4de3",
+      "records": 500
+    },
+    "train.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    },
+    "calibration.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    },
+    "test.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    }
+  }
+}

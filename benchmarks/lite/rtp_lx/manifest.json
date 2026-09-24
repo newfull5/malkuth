@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "external": {
+    "source": "ToxicityPrompts/RTP-LX",
+    "rights": "see microsoft/RTP-LX",
+    "sample": {
+      "n_per_part": 500,
+      "seed": 0
+    }
+  },
+  "base_revisions": {},
+  "dataset_revisions": {},
+  "holdout_sources": [],
+  "trainable_sources": [],
+  "eval_only_sources": [
+    "rtp_lx"
+  ],
+  "context": {
+    "max_state": 8192,
+    "max_branch": 8192,
+    "max_packed": 16384,
+    "truncate": false
+  },
+  "eval_only": true,
+  "tasks": [
+    "rtp_lx_ar",
+    "rtp_lx_de",
+    "rtp_lx_en",
+    "rtp_lx_es",
+    "rtp_lx_fr",
+    "rtp_lx_hi",
+    "rtp_lx_ja",
+    "rtp_lx_ko",
+    "rtp_lx_th",
+    "rtp_lx_zh"
+  ],
+  "parts": {
+    "ar": 20,
+    "zh": 20,
+    "ko": 20,
+    "fr": 20,
+    "en": 20,
+    "es": 20,
+    "de": 20,
+    "ja": 20,
+    "th": 20,
+    "hi": 20
+  },
+  "files": {
+    "development.jsonl": {
+      "sha256": "ac2513a6b0d9f4cb88a280ae7e36b9b527cc6c95e5a4e34f9a0f6873cc0785c9",
+      "records": 200
+    },
+    "train.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    },
+    "calibration.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    },
+    "test.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    }
+  },
+  "lite": {
+    "from": "benchmarks/rtp_lx",
+    "n_per_part": 20,
+    "seed": 0
+  }
+}

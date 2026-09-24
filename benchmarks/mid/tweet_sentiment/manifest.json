@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "external": {
+    "source": "cardiffnlp/tweet_sentiment_multilingual",
+    "rights": "cc-by-3.0",
+    "sample": {
+      "n_per_part": 500,
+      "seed": 0
+    }
+  },
+  "base_revisions": {},
+  "dataset_revisions": {},
+  "holdout_sources": [],
+  "trainable_sources": [],
+  "eval_only_sources": [
+    "tweet_sentiment"
+  ],
+  "context": {
+    "max_state": 8192,
+    "max_branch": 8192,
+    "max_packed": 16384,
+    "truncate": false
+  },
+  "eval_only": true,
+  "tasks": [
+    "tweet_sentiment_ar",
+    "tweet_sentiment_de",
+    "tweet_sentiment_en",
+    "tweet_sentiment_es",
+    "tweet_sentiment_fr",
+    "tweet_sentiment_hi",
+    "tweet_sentiment_it",
+    "tweet_sentiment_pt"
+  ],
+  "parts": {
+    "en": 100,
+    "de": 100,
+    "fr": 100,
+    "es": 100,
+    "hi": 100,
+    "ar": 100,
+    "it": 100,
+    "pt": 100
+  },
+  "files": {
+    "development.jsonl": {
+      "sha256": "1a3c49b48a33409c4eda4b4886a351548cd9d7fc497d6e714d2a613c922c1a18",
+      "records": 800
+    },
+    "train.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    },
+    "calibration.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    },
+    "test.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    }
+  },
+  "lite": {
+    "from": "benchmarks/tweet_sentiment",
+    "n_per_part": 100,
+    "seed": 0
+  }
+}

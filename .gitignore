@@ -1,0 +1,19 @@
+.omc/
+__pycache__/
+kev/
+laya/
+# large artifacts live on the HF Hub (private); lite/mid/val are checked in, the full suites are not
+benchmarks/full/
+data/
+wandb/
+results/**/rows.json
+results/**/all_rows.json
+results/**/predictions.jsonl
+results/**/*.log
+kev-latest/
+
+# suites derived from non-commercial sources; rebuild with tools/ (see benchmarks/README.md)
+benchmarks/*/xnli/
+benchmarks/*/val_xnli/
+benchmarks/*/financial_phrasebank/
+benchmarks/*/val_race/

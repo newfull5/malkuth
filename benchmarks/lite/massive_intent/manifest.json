@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "external": {
+    "source": "mteb/amazon_massive_intent",
+    "rights": "apache-2.0 (upstream cc-by-4.0)",
+    "sample": {
+      "n_per_part": 500,
+      "seed": 0
+    }
+  },
+  "base_revisions": {},
+  "dataset_revisions": {},
+  "holdout_sources": [],
+  "trainable_sources": [],
+  "eval_only_sources": [
+    "massive_intent"
+  ],
+  "context": {
+    "max_state": 8192,
+    "max_branch": 8192,
+    "max_packed": 16384,
+    "truncate": false
+  },
+  "eval_only": true,
+  "tasks": [
+    "massive_intent_ar",
+    "massive_intent_de",
+    "massive_intent_en",
+    "massive_intent_es",
+    "massive_intent_fr",
+    "massive_intent_hi",
+    "massive_intent_ja",
+    "massive_intent_ko",
+    "massive_intent_th",
+    "massive_intent_zh"
+  ],
+  "parts": {
+    "en": 20,
+    "ko": 20,
+    "ja": 20,
+    "zh": 20,
+    "de": 20,
+    "fr": 20,
+    "es": 20,
+    "hi": 20,
+    "ar": 20,
+    "th": 20
+  },
+  "files": {
+    "development.jsonl": {
+      "sha256": "4dc5c480783ce548d8bb0cd2c3a3cda32abfa6acbafe244f20517ae33606232f",
+      "records": 200
+    },
+    "train.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    },
+    "calibration.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    },
+    "test.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    }
+  },
+  "lite": {
+    "from": "benchmarks/massive_intent",
+    "n_per_part": 20,
+    "seed": 0
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "external": {
+    "source": "cardiffnlp/tweet_sentiment_multilingual:validation",
+    "rights": "cc-by-3.0",
+    "sample": {
+      "n_per_part": 50,
+      "seed": 0
+    }
+  },
+  "base_revisions": {},
+  "dataset_revisions": {},
+  "holdout_sources": [],
+  "trainable_sources": [],
+  "eval_only_sources": [
+    "val_tweet_sentiment"
+  ],
+  "context": {
+    "max_state": 8192,
+    "max_branch": 8192,
+    "max_packed": 16384,
+    "truncate": false
+  },
+  "eval_only": true,
+  "tasks": [
+    "val_tweet_ar",
+    "val_tweet_de",
+    "val_tweet_en",
+    "val_tweet_es",
+    "val_tweet_fr",
+    "val_tweet_hi",
+    "val_tweet_it",
+    "val_tweet_pt"
+  ],
+  "parts": {
+    "en": 50,
+    "de": 50,
+    "fr": 50,
+    "es": 50,
+    "hi": 50,
+    "ar": 50,
+    "it": 50,
+    "pt": 50
+  },
+  "files": {
+    "development.jsonl": {
+      "sha256": "8cf18b7820e1af3d1e60d4847be47192cdf7453d4a4b93d1dd3e86b15f32c551",
+      "records": 400
+    },
+    "train.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    },
+    "calibration.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    },
+    "test.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    }
+  }
+}

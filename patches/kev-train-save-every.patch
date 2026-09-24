@@ -1,0 +1,37 @@
+diff --git a/kev/train.py b/kev/train.py
+index e47de14..75a4a2a 100644
+--- a/kev/train.py
++++ b/kev/train.py
+@@ -166,6 +166,14 @@ def encode_batch(model, tok, a, chunk, epoch):
+     return out
+ 
+ 
++def save_checkpoint(model, tok, meta, a, suite_hash, init_source, path):
++    """Intermediate checkpoint in the same layout as the final one (adapter + head.pt + tokenizer), loadable by --run."""
++    model.lm.save_pretrained(path)
++    meta.head, meta.extra = model.head.state_dict(), {"args": vars(a), "suite_sha256": suite_hash, "init_source": init_source}
++    write_meta(path, meta)
++    tok.save_pretrained(path)
++
++
+ def batch_loss(model, a, batch, dev, anchors, anchor_sources, autocast):
+     """Forward the variants and sum the loss terms: mean question loss per variant, the anchor KL per anchored variant,
+     the permutation KL per permuted variant. Returns (loss, terms) with the summed term values for logging."""
+@@ -241,6 +249,7 @@ def parse_args():
+                                                    "(local directory or hub id) instead of starting from the base model; keeps the "
+                                                    "released model's in-domain skill while adapting to a new domain")
+     ap.add_argument("--seed", type=int, default=0)
++    ap.add_argument("--save_every", type=int, default=0, help="also save an intermediate checkpoint to <out>/step-<n> every n optimizer steps (0 = final only)")
+     a = ap.parse_args()
+     if min(a.epochs, a.accum, a.n_per_source, a.lora, a.batch, a.synthetic_repeat) < 1 or not 0 < a.public_frac <= 1:
+         ap.error("epochs, accum, n_per_source, lora, batch and synthetic_repeat must be positive; 0 < public_frac <= 1")
+@@ -339,6 +348,9 @@ def main():
+                 if step % 10 == 0:
+                     print(f"ep{ep} step {step}/{steps} loss {run['ce']/run['n']:.3f} kl {run['kl']/max(run['kl_n'],1):.3f} anchor {run['anchor']/max(run['anchor_n'],1):.3f} {(time.time()-t0)/seen:.3f}s/rec", flush=True)
+                     run = Counter()
++                if a.save_every and step % a.save_every == 0 and step < steps:
++                    save_checkpoint(model, tok, meta, a, suite_hash, init_source, out_dir / f"step-{step}")
++                    print(f"checkpoint step {step} -> {out_dir / f'step-{step}'}", flush=True)
+ 
+     model.lm.save_pretrained(a.out)
+     meta.head, meta.extra = model.head.state_dict(), {"args": vars(a), "suite_sha256": suite_hash, "init_source": init_source}

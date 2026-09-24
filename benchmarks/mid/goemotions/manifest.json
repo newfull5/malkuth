@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "external": {
+    "source": "google-research-datasets/go_emotions:simplified",
+    "rights": "apache-2.0",
+    "sample": {
+      "n_per_part": 500,
+      "seed": 0
+    }
+  },
+  "base_revisions": {},
+  "dataset_revisions": {},
+  "holdout_sources": [],
+  "trainable_sources": [],
+  "eval_only_sources": [
+    "goemotions"
+  ],
+  "context": {
+    "max_state": 8192,
+    "max_branch": 8192,
+    "max_packed": 16384,
+    "truncate": false
+  },
+  "eval_only": true,
+  "tasks": [
+    "goemotions"
+  ],
+  "parts": {
+    "None": 100
+  },
+  "files": {
+    "development.jsonl": {
+      "sha256": "89a3fa463e06b656a63cbe192370ea87e98f97d70457f0d977a63982668b45b8",
+      "records": 100
+    },
+    "train.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    },
+    "calibration.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    },
+    "test.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    }
+  },
+  "lite": {
+    "from": "benchmarks/goemotions",
+    "n_per_part": 100,
+    "seed": 0
+  }
+}

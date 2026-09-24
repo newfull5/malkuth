@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "external": {
+    "source": "Davlan/sib200",
+    "rights": "cc-by-sa-4.0",
+    "sample": {
+      "n_per_part": 500,
+      "seed": 0
+    }
+  },
+  "base_revisions": {},
+  "dataset_revisions": {},
+  "holdout_sources": [],
+  "trainable_sources": [],
+  "eval_only_sources": [
+    "sib200"
+  ],
+  "context": {
+    "max_state": 8192,
+    "max_branch": 8192,
+    "max_packed": 16384,
+    "truncate": false
+  },
+  "eval_only": true,
+  "tasks": [
+    "sib200_ar",
+    "sib200_de",
+    "sib200_en",
+    "sib200_es",
+    "sib200_fr",
+    "sib200_hi",
+    "sib200_ja",
+    "sib200_ko",
+    "sib200_th",
+    "sib200_zh"
+  ],
+  "parts": {
+    "en": 20,
+    "ko": 20,
+    "ja": 20,
+    "zh": 20,
+    "de": 20,
+    "fr": 20,
+    "es": 20,
+    "hi": 20,
+    "ar": 20,
+    "th": 20
+  },
+  "files": {
+    "development.jsonl": {
+      "sha256": "5d6548d9c5fab1a9cdf488624de49236c37ff73fd96ef09639743ebe7b64cde2",
+      "records": 200
+    },
+    "train.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    },
+    "calibration.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    },
+    "test.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    }
+  },
+  "lite": {
+    "from": "benchmarks/sib200",
+    "n_per_part": 20,
+    "seed": 0
+  }
+}

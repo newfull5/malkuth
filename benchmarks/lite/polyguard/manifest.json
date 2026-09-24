@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "external": {
+    "source": "ToxicityPrompts/PolyGuardPrompts",
+    "rights": "cc-by-4.0",
+    "sample": {
+      "n_per_part": 500,
+      "seed": 0
+    }
+  },
+  "base_revisions": {},
+  "dataset_revisions": {},
+  "holdout_sources": [],
+  "trainable_sources": [],
+  "eval_only_sources": [
+    "polyguard"
+  ],
+  "context": {
+    "max_state": 8192,
+    "max_branch": 8192,
+    "max_packed": 16384,
+    "truncate": false
+  },
+  "eval_only": true,
+  "tasks": [
+    "polyguard_ar_prompt",
+    "polyguard_ar_refusal",
+    "polyguard_ar_response",
+    "polyguard_de_prompt",
+    "polyguard_de_refusal",
+    "polyguard_de_response",
+    "polyguard_en_prompt",
+    "polyguard_en_refusal",
+    "polyguard_en_response",
+    "polyguard_es_prompt",
+    "polyguard_es_refusal",
+    "polyguard_es_response",
+    "polyguard_fr_prompt",
+    "polyguard_fr_refusal",
+    "polyguard_fr_response",
+    "polyguard_hi_prompt",
+    "polyguard_hi_refusal",
+    "polyguard_hi_response",
+    "polyguard_ja_prompt",
+    "polyguard_ja_refusal",
+    "polyguard_ja_response",
+    "polyguard_ko_prompt",
+    "polyguard_ko_refusal",
+    "polyguard_ko_response",
+    "polyguard_th_prompt",
+    "polyguard_th_refusal",
+    "polyguard_th_response",
+    "polyguard_zh_prompt",
+    "polyguard_zh_refusal",
+    "polyguard_zh_response"
+  ],
+  "parts": {
+    "en": 20,
+    "hi": 20,
+    "fr": 20,
+    "de": 20,
+    "th": 20,
+    "es": 20,
+    "zh": 20,
+    "ar": 20,
+    "ko": 20,
+    "ja": 20
+  },
+  "files": {
+    "development.jsonl": {
+      "sha256": "af57419628fb6c3cde1b682245d8daa51a0b75f393e24b9bc266c4edbfa34322",
+      "records": 200
+    },
+    "train.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    },
+    "calibration.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    },
+    "test.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    }
+  },
+  "lite": {
+    "from": "benchmarks/polyguard",
+    "n_per_part": 20,
+    "seed": 0
+  }
+}

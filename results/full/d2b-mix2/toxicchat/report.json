@@ -1,0 +1,267 @@
+{
+  "objective": -0.15699467409344386,
+  "paired_flip": null,
+  "unknowable": null,
+  "clean": {
+    "n": 1000,
+    "nll": 0.1569946740934439,
+    "acc": 0.956,
+    "ece": 0.01934086638317338,
+    "brier": 0.07681361683635379,
+    "mean_conf": 0.9677679268435875,
+    "confident_error_rate": 0.019,
+    "coverage_at_0_9": 0.904,
+    "accuracy_at_0_9": 0.9789823008849557,
+    "coverage_at_5pct_error": 1.0,
+    "coverage_at_1pct_error": 0.612,
+    "aurc": 0.00868200224901464,
+    "error_rate_at_0_9": 0.02101769911504425,
+    "confidence_bias": 0.011767926843587517,
+    "top_bins": {
+      "0.9": {
+        "n": 904,
+        "errors": 19,
+        "error_rate": 0.02101769911504425
+      },
+      "0.95": {
+        "n": 848,
+        "errors": 16,
+        "error_rate": 0.018867924528301886
+      },
+      "0.99": {
+        "n": 723,
+        "errors": 8,
+        "error_rate": 0.011065006915629323
+      }
+    },
+    "selective": {
+      "0.5": {
+        "coverage": 0.5,
+        "accuracy": 0.994,
+        "confidence_cutoff": 0.9986378192458711
+      },
+      "0.8": {
+        "coverage": 0.8,
+        "accuracy": 0.98,
+        "confidence_cutoff": 0.9750457569498788
+      }
+    }
+  },
+  "tasks": {
+    "toxicchat_jailbreak": {
+      "n": 500,
+      "nll": 0.20782632334283044,
+      "acc": 0.948,
+      "ece": 0.02820012706956513,
+      "brier": 0.09871545642632594,
+      "mean_conf": 0.9551416798080646,
+      "confident_error_rate": 0.024,
+      "coverage_at_0_9": 0.868,
+      "accuracy_at_0_9": 0.9723502304147466,
+      "coverage_at_5pct_error": 0.976,
+      "coverage_at_1pct_error": 0.24,
+      "aurc": 0.01922144005560507,
+      "error_rate_at_0_9": 0.027649769585253458,
+      "confidence_bias": 0.007141679808064683,
+      "top_bins": {
+        "0.9": {
+          "n": 434,
+          "errors": 12,
+          "error_rate": 0.027649769585253458
+        },
+        "0.95": {
+          "n": 390,
+          "errors": 12,
+          "error_rate": 0.03076923076923077
+        },
+        "0.99": {
+          "n": 295,
+          "errors": 5,
+          "error_rate": 0.01694915254237288
+        }
+      },
+      "selective": {
+        "0.5": {
+          "coverage": 0.5,
+          "accuracy": 0.984,
+          "confidence_cutoff": 0.9943947467917427
+        },
+        "0.8": {
+          "coverage": 0.8,
+          "accuracy": 0.97,
+          "confidence_cutoff": 0.9415334533269215
+        }
+      }
+    },
+    "toxicchat_toxicity": {
+      "n": 500,
+      "nll": 0.10616302484405732,
+      "acc": 0.964,
+      "ece": 0.01742963018318329,
+      "brier": 0.05491177724638162,
+      "mean_conf": 0.9803941738791102,
+      "confident_error_rate": 0.014,
+      "coverage_at_0_9": 0.94,
+      "accuracy_at_0_9": 0.9851063829787234,
+      "coverage_at_5pct_error": 1.0,
+      "coverage_at_1pct_error": 0.922,
+      "aurc": 0.003048145170036695,
+      "error_rate_at_0_9": 0.014893617021276596,
+      "confidence_bias": 0.01639417387911024,
+      "top_bins": {
+        "0.9": {
+          "n": 470,
+          "errors": 7,
+          "error_rate": 0.014893617021276596
+        },
+        "0.95": {
+          "n": 458,
+          "errors": 4,
+          "error_rate": 0.008733624454148471
+        },
+        "0.99": {
+          "n": 428,
+          "errors": 3,
+          "error_rate": 0.007009345794392523
+        }
+      },
+      "selective": {
+        "0.5": {
+          "coverage": 0.5,
+          "accuracy": 1.0,
+          "confidence_cutoff": 0.9997438194833532
+        },
+        "0.8": {
+          "coverage": 0.8,
+          "accuracy": 0.995,
+          "confidence_cutoff": 0.9972031323125303
+        }
+      }
+    }
+  },
+  "variants": {
+    "clean": {
+      "n": 1000,
+      "nll": 0.1569946740934439,
+      "acc": 0.956,
+      "ece": 0.01934086638317338,
+      "brier": 0.07681361683635379,
+      "mean_conf": 0.9677679268435875,
+      "confident_error_rate": 0.019,
+      "coverage_at_0_9": 0.904,
+      "accuracy_at_0_9": 0.9789823008849557,
+      "coverage_at_5pct_error": 1.0,
+      "coverage_at_1pct_error": 0.612,
+      "aurc": 0.00868200224901464,
+      "error_rate_at_0_9": 0.02101769911504425,
+      "confidence_bias": 0.011767926843587517,
+      "top_bins": {
+        "0.9": {
+          "n": 904,
+          "errors": 19,
+          "error_rate": 0.02101769911504425
+        },
+        "0.95": {
+          "n": 848,
+          "errors": 16,
+          "error_rate": 0.018867924528301886
+        },
+        "0.99": {
+          "n": 723,
+          "errors": 8,
+          "error_rate": 0.011065006915629323
+        }
+      },
+      "selective": {
+        "0.5": {
+          "coverage": 0.5,
+          "accuracy": 0.994,
+          "confidence_cutoff": 0.9986378192458711
+        },
+        "0.8": {
+          "coverage": 0.8,
+          "accuracy": 0.98,
+          "confidence_cutoff": 0.9750457569498788
+        }
+      }
+    }
+  },
+  "heldout_tasks": {},
+  "permutation": {
+    "n": 0,
+    "mean_max_delta": null,
+    "flip_rate": null
+  },
+  "temperature": 1.0,
+  "calibrated_clean": {
+    "n": 1000,
+    "nll": 0.1569946740934439,
+    "acc": 0.956,
+    "ece": 0.01934086638317338,
+    "brier": 0.07681361683635379,
+    "mean_conf": 0.9677679268435875,
+    "confident_error_rate": 0.019,
+    "coverage_at_0_9": 0.904,
+    "accuracy_at_0_9": 0.9789823008849557,
+    "coverage_at_5pct_error": 1.0,
+    "coverage_at_1pct_error": 0.612,
+    "aurc": 0.00868200224901464,
+    "error_rate_at_0_9": 0.02101769911504425,
+    "confidence_bias": 0.011767926843587517,
+    "top_bins": {
+      "0.9": {
+        "n": 904,
+        "errors": 19,
+        "error_rate": 0.02101769911504425
+      },
+      "0.95": {
+        "n": 848,
+        "errors": 16,
+        "error_rate": 0.018867924528301886
+      },
+      "0.99": {
+        "n": 723,
+        "errors": 8,
+        "error_rate": 0.011065006915629323
+      }
+    },
+    "selective": {
+      "0.5": {
+        "coverage": 0.5,
+        "accuracy": 0.994,
+        "confidence_cutoff": 0.9986378192458711
+      },
+      "0.8": {
+        "coverage": 0.8,
+        "accuracy": 0.98,
+        "confidence_cutoff": 0.9750457569498788
+      }
+    }
+  },
+  "metric_policy": {
+    "version": 2,
+    "selective_ties": "whole_confidence_groups",
+    "coverage_at_error": "in-sample maximum over confidence thresholds; not a deployed error guarantee",
+    "aurc": "right-step integral over whole confidence groups",
+    "confident_error_rate": "high-confidence errors divided by all questions",
+    "error_rate_at_0_9": "errors divided by questions accepted at p_max >= 0.9",
+    "nll": "exact from logits when recorded; otherwise from floored probabilities",
+    "nll_floor": 1e-09,
+    "renormalize_returned_probabilities": true,
+    "raw_sums_outside_1e_5": 0,
+    "returned_zeros": 0
+  },
+  "coverage": {
+    "requested_records": 500,
+    "evaluated_records": 500,
+    "rejected_records": 0,
+    "requested_questions": 1000,
+    "evaluated_questions": 1000
+  },
+  "seconds": 2.374687671661377,
+  "batched": {
+    "pass_tokens": 16384
+  },
+  "suite": "../benchmarks/toxicchat",
+  "run": "runs/d2b-mix2"
+}

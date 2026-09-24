@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "external": {
+    "source": "nayohan/KOLD",
+    "rights": "cc-by-sa-4.0 (upstream boychaboy/KOLD)",
+    "sample": {
+      "n_per_part": 500,
+      "seed": 0
+    }
+  },
+  "base_revisions": {},
+  "dataset_revisions": {},
+  "holdout_sources": [],
+  "trainable_sources": [],
+  "eval_only_sources": [
+    "kold"
+  ],
+  "context": {
+    "max_state": 8192,
+    "max_branch": 8192,
+    "max_packed": 16384,
+    "truncate": false
+  },
+  "eval_only": true,
+  "tasks": [
+    "kold"
+  ],
+  "parts": {
+    "None": 20
+  },
+  "files": {
+    "development.jsonl": {
+      "sha256": "bd2884d799e1102d8a09157b54ce8ab50bd6562863d9f2fd4c5eeea005a95847",
+      "records": 20
+    },
+    "train.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    },
+    "calibration.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    },
+    "test.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": 0
+    }
+  },
+  "lite": {
+    "from": "benchmarks/kold",
+    "n_per_part": 20,
+    "seed": 0
+  }
+}
