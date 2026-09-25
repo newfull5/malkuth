@@ -2,6 +2,7 @@
 base_model: empero-ai/Qwen3.8-2B-Distill
 base_model_relation: adapter
 library_name: peft
+pipeline_tag: zero-shot-classification
 license: cc-by-nc-4.0
 language: [en, ko, ja, zh, de, fr, es, hi, ar, th]
 tags: [decision-model, classification, calibration, kev, system-one, lora, pointer-head]
